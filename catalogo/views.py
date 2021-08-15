@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Cliente
 # Create your views here.
 
 def index(request):
@@ -18,3 +18,7 @@ def sumar(request, numero1, numero2):
 
 def contacto(request):
     return render(request, 'catalogo/contacto.html')
+
+def clientes(request):
+    cliente= Cliente.objects.all()
+    return render(request, 'catalogo/clientes.html', {"data":cliente})

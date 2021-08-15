@@ -5,5 +5,6 @@ urlpatterns=[
     path('', views.index),
     path('contacto/' , views.contacto),
     path('recibir/', views.recibir),
-    path('sumar/<int:numero1>/<int:numero2>/', views.sumar)
+    path('sumar/<int:numero1>/<int:numero2>/', views.sumar),
+    path('clientes', views.clientes)
 ]

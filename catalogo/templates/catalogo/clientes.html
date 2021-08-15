@@ -1,0 +1,10 @@
+{% extends 'catalogo/layout.html'%}
+{% block content %}
+    {% for cli in data %}
+    <ul class="list-group">
+        {% if cli.edad >= 18 %}
+            <li class="list-group-item">{{cli.nombre}} {{cli.apellido}} {{cli.edad}}</li>
+        {% endif %}
+    </ul>
+    {% endfor %}
+{% endblock %}
