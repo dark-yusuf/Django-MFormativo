@@ -1,8 +1,11 @@
 {% extends 'catalogo/layout.html' %}
 {% block content %}
-    <form>
-        <input  name="email" type="email" placeholder="Email"/>
+
+    <form action="/recibirReclamo" method="POST">
+        {% csrf_token %}
+        <input name="email" type="email" placeholder="Email"/>
         <textarea name="reclamo"></textarea>
         <button>Enviar</button>
     </form>
+    {{mensaje}} {{email}}
 {% endblock %}
