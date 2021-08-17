@@ -7,3 +7,4 @@ class Cliente(models.Model):
     nombre = models.CharField(max_length=50, null=False)
     apellido = models.CharField(max_length=100, null=False)
     edad= models.IntegerField()
+    clave= models.CharField(max_length=20)
